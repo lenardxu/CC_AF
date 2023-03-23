@@ -1,0 +1,6 @@
+SlidingWindow:
+  ros__parameters:
+    elementWidth: 20
+    brightnessThreshold: 170 #was 170
+    # recognize obstacles in x out of y frames
+    xOutOfY: [2, 3]
