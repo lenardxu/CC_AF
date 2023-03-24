@@ -43,6 +43,16 @@ Or the single ROS node `probabilistic_tracking` for lane detection and tracking 
 ros2 launch cc_visual_computing probabilistic_tracking
 ```
 
+### Demo
+A model vehicle runs on the specific race track (designated by Carolo Cup) outputting the captured image sequence and corresponding sequence of lane detection 
+results including the generated reference trajectory points which are stored in this [input video file](./docs/output.avi) and 
+[output video file](./docs/probabilistic_tracking_result_video_slower.avi). To view these two related videos, you need to first
+install Git LFS ([installation guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)) 
+and then command:
+```shell
+git lfs pull
+```
+
 ### Comments
 Currently, the process of computing homography is not included in this repo. However, there are several resources you may refer to:
 * [OpenCV guide](https://docs.opencv.org/4.x/d9/dab/tutorial_homography.html) and 
