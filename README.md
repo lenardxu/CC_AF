@@ -33,7 +33,7 @@ colcon build --symlink-install
 ```
 
 ### Lane detection algorithm flowchart
-![Algorithm_Flowchart](./docs/LaneDetectionAlgorithmFlowchart)
+![Algorithm_Flowchart](./docs/LaneDetectionAlgorithmFlowchart.png)
 
 ### Run 
 Launch the single ROS node `sliding_window` for lane detection and simplistic reference trajectory generation by
