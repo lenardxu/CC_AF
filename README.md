@@ -1,10 +1,9 @@
 # CC_AF
-This repo only showcases the perception block of autonomous driving pipeline - **Visual Computing** - dedicated to competition 
-of Carolo Cup according to the confidentiality agreement.
+This repo is dedicated for the perception block of autonomous driving pipeline for the competition of Carolo Cup. For confidential reasons,
+the other blocks won't be presented here.
 
 ## Visual Computing
-This block of visual computing is dedicated to lane detection which involves detecting and tracking the land markers which 
-are specific to the Carolo Cup.
+This block of visual computing is dedicated to lane detection which involves **detecting and tracking the land markers** specific to the Carolo Cup's settings.
 
 ### Dependencies
 #### ROS 2 Foxy
@@ -33,6 +32,9 @@ colcon build --symlink-install
 . install/local_setup.bash
 ```
 
+### Lane detection algorithm flowchart
+![Algorithm_Flowchart](./docs/LaneDetectionAlgorithmFlowchart)
+
 ### Run 
 Launch the single ROS node `sliding_window` for lane detection and simplistic reference trajectory generation by
 ```shell
@@ -46,8 +48,21 @@ ros2 launch cc_visual_computing probabilistic_tracking
 ### Demo
 A model vehicle runs on the specific race track (designated by Carolo Cup) outputting the captured image sequence and corresponding sequence of lane detection 
 results including the generated reference trajectory points which are stored in this [input video file](./docs/output.avi) and 
-[output video file](./docs/probabilistic_tracking_result_video_slower.avi). To view these two related videos, you need to first
-install Git LFS ([installation guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)) 
+[output video file](./docs/probabilistic_tracking_result_video_slower.avi). 
+
+Input video:
+
+<a href="./docs/output.avi">
+    <img src="./docs/lane_detection_input.png" alt="Watch the video" width="300">
+</a>
+
+Output video:
+
+<a href="./docs/probabilistic_tracking_result_video_slower.avi">
+    <img src="./docs/lane_detection_output.png" alt="Watch the video" width="300">
+</a>
+
+To view these two related videos, you need to first install Git LFS ([installation guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)) 
 and then command:
 ```shell
 git lfs pull
